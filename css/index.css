@@ -30,6 +30,10 @@ p {
     font-family: sans-serif;
 }
 
+.mySkills {
+    width: 100%;
+}
+
 .flexContainer {
     display: flex;
     flex-direction: row;
@@ -37,9 +41,9 @@ p {
 
 .flexContainer div {
     width: 100%;
-    padding-bottom: 20px;
-    margin: 5px;
     float: left;
+    padding-right: 3px;
+    padding-bottom: 20px;
 }
 
 .flexContainer img {
