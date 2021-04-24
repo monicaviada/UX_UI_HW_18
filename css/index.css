@@ -1,0 +1,127 @@
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+
+h2 {
+    text-align: left;
+    font-size: 28px;
+    font-family: sans-serif;
+    padding-top: 40px;
+}
+
+h3 {
+    text-align: left;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+h4 {
+    text-align: left;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexContainer div {
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 5px;
+    float: left;
+}
+
+.flexContainer img {
+    width: 100%;
+}
+
+.flexContainer p {
+    width: 100%;
+}
+
+.flexContainer h3 {
+    width: 100%;
+}
+
+.workGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "CrystalClearimg CrystalClearCopy"
+    "DOIimg DOICopy"
+    "CatsInKneadimg CatsInKneadCopy"
+    ;
+}
+
+.myWorkimg img{
+   width: 100%;
+}
+
+.myWorkcopy {
+    width: 100%;
+}
+
+.CrystalClearimg {
+    grid-area: myWorkimg img;    
+}
+
+.DOIimg {
+    grid-area: myWorkimg img;
+}
+
+.CatsInKneadimg {
+    grid-area: myWorkimg img;
+}
+
+.CrystalClearCopy {
+    grid-area: CrystalClearCopy;
+    padding-bottom: 20px;
+}
+
+.DOICopy {
+    grid-area: DOICopy;
+    padding-bottom: 20px;
+}
+
+.CatsInKneadCopy {
+    grid-area: CatsInKneadCopy;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    .flexContainer {
+        flex-direction: column;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .workGrid {
+        flex-direction: column;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "CrystalClearimg"
+            "CrystalClearCopy"
+            "DOIimg"
+            "DOICopy"
+            "CatsInKneadimg"
+            "CatsInKneadCopy"
+        ;
+    }
+
+    .myWorkcopy {
+        max-width: 400px;
+    }
+}
